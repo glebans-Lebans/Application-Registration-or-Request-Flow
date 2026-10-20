@@ -50,16 +50,51 @@
                     <legend>F3 · Household information</legend>
                     <p class="help">Tell us about your household and usage.</p>
                     <div class="field">
-                        <label for="people">Number of people in household.</label>
+                        <label for="people">Number of people in household</label>
                         <input id="people" name="people" type="number" min="1" max="20">
+                    </div>
+                    <div class="field">
+                        <label for="usage">Average water usage per month in gallons</label>
+                        <input id="usage" name="usage" type="number" min="1" max="50000">
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                    <legend>F3 · Irrigation</legend>
+                    <p class="help">Do you have an outdoor irrigation system?</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B
+                        <input type="radio" name="request_type" value="option-a"> 
+                        Yes
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="request_type" value="option-b" checked>
+                        No
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>F3 · Water Saving Units</legend>
+                    <p class="help">
+                        Do you have any water saving units in your home?
+                        Please check all that apply.
+                    </p>
+                    <label class="choice">
+                        <input type="checkbox" name="water-units" value="dishwasher"> 
+                        Dishwasher
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="water-units" value="washer"> 
+                        Washing machine
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="water-units" value="toilet"> 
+                        Toilet
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="water-units" value="shower"> 
+                        Showerhead
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="water-units" value="barrel"> 
+                        Rain barrel
                     </label>
                 </fieldset>
 
