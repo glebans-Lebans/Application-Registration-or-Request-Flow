@@ -109,7 +109,13 @@ button:disabled{
     opacity:.55;
     cursor:not-allowed;
 }
-@media (min-width:48rem){
+
+.required {
+    color: var(--color-error);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+@media (min-width:480px){
     .paired-fields{
         display:grid;
         grid-template-columns:1fr 1fr;

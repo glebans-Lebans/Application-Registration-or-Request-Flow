@@ -8,24 +8,29 @@
     <body>
         <header class="page-header">
             <p class="eyebrow">Application, Registration, or Request</p>
-            <h1>Replace with a specific task title</h1>
-            <p class="lede">Explain who this form is for, what it accomplishes, how long it takes, and what happens after submission.</p>
+            <h1>What is your water use?</h1>
+            <p class="lede">
+                This is a short 5-minute survey for household water use in the Phoenix Metropolitan Area. We are collecting data from the local population to determine reasons for high water consumption, find areas for improvement, and help educate communities on water conservation.
+            </p>
         </header>
         <main>
             <section id="expectations">
                 <h2>F1 · Purpose and Expectations</h2>
-                <p>State the required/optional convention and a concise privacy notice. Use fictional test data only.</p>
+                <p>All fields marked with a <span class="required"> * </span> are required.</p> 
+                <p>
+                    Your information is collected only for the purpose of this survey, cannot be used to identify you personally, and will not be shared outside our organization. Data used in reports is generalized to submissions per area and does not include personal information.
+                </p>
             </section>
             <form action="" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
+                    <p class="help">This information is necessary so we can inform you when our report is published.</p>
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
+                        <label for="name">First Name<span class="required"> * </span></label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
                     </div>
                     <div class="field">
-                        <label for="email">Email address (required)</label>
+                        <label for="email">Email address <span class="required"> * </span></label>
                         <input id="email" name="email" type="email" autocomplete="email" required>
                     </div>
                 </fieldset>
