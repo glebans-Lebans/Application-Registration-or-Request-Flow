@@ -1,3 +1,9 @@
+/* CSS by Grant Lebans */
+/* Google Fonts */
+/* Rampart One font designed by Fontworks Inc. */
+/* Available weights: Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 :root{
     --color-text:#404040;
     --color-surface:#fff;
@@ -9,20 +15,92 @@
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
+    
+    /* Colors */
+    --off-white: #e8edd1;
+    --light-green: #dff2af;
+    --green: #6da08f;
+    --blue-gray: #4c5d75;
+    --dark-blue-gray: #333e4e;
+    --gray: #888888;
+    --dark-gray: #2c2e31;
+    
+    /* Element coloring */
+    --bg-color: var(--off-white);
+    --card-callout: var(--light-green);
+    --font-color: var(--dark-gray);
+    --main-color: var(--dark-blue-gray);
+    --accent-color: var(--blue-gray);
+    --gradient: linear-gradient(transparent 80%, var(--light-green));
+    --link-color: var(--green);
+    --link-font-color: var(--off-white);
+    --link-hover-color: var(--blue-gray);
+    --hover-shadow: 0px 3px 0px var(--green);
+    --heading-color: var(--off-white);
+    --heading-color-2: var(--dark-blue-gray);
+    --drop-shadow: 3px 3px 3px var(--dark-blue-gray);
+
+    /* Spacing */
+    --space-aside: 0.5rem;
+    --space-card: 1rem;
+
+    /* Border */
+    --border: 1px solid var(--dark-gray);
+    --border-radius: 0.25rem;
+    --btt-radius: 4rem;
+
+    /* Outline */
+    --element-outline: 4px solid var(--dark-blue-gray);
+    --active-outline: 2px solid var(--green);
+
+    /* Font */
+    --heading-font: "Rampart One", Arial, sans-serif;
+    --content-font: Arial, sans-serif;
+    --h1-font-size: 2.2em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.25em;
+    --content-font-size: 1.1em;
+    --line-height: 1.5;
+    --label-font-weight: 700;
 }
+
 *,*::before,*::after{
     box-sizing:border-box;
 }
+
 body{
     margin:0;
-    color:var(--color-text);
-    background:var(--color-surface);
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+    color:var(--font-color);
+    background:var(--bg-color);
+    font-family:var(--content-font);
+    font-size: var(--content-font-size);
+    line-height:var(--line-height);
 }
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: var(--h1-font-size);
+}
+
+h2, h3 {
+    color: var(--heading-color-2);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
 .page-header{
     padding:clamp(2rem,6vw,5rem);
-    background:var(--color-action);
+    background:var(--main-color);
     color:#fff;
 }
 .eyebrow{
