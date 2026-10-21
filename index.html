@@ -43,19 +43,19 @@
                     </div>
                     <div class="field">
                         <label for="city">City / Town <span class="required"> * </span></label>
-                        <input id="city" name="city" type="text" autocomplete="address-level2" required>
+                        <input id="city" name="city" type="text" pattern="[^0-9]*" autocomplete="address-level2" required>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>F3 · Household information</legend>
-                    <p class="help">Tell us about your household and usage.</p>
+                    <p class="help">Tell us about your household and usage. Usage amount is required because it is the core focus of our research.</p>
                     <div class="field">
                         <label for="people">Number of people in household</label>
                         <input id="people" name="people" type="number" min="1" max="20">
                     </div>
                     <div class="field">
-                        <label for="usage">Average water usage per month in gallons</label>
-                        <input id="usage" name="usage" type="number" min="1" max="50000">
+                        <label for="usage">Average water usage per month in gallons <span class="required"> * </span></label>
+                        <input id="usage" name="usage" type="number" min="1" max="50000" required>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -108,14 +108,30 @@
             <section id="states">
                 <h2>F5 · State and Recovery Specimen</h2>
                 <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
-                <div class="error-summary">
+                <div id="errors" class="error-summary">
                     <h3>There is a problem with the fictional submission</h3>
-                    <p><a href="#error-example">Email address needs attention</a></p>
+                    <p><a href="#email">Email address needs attention</a></p>
                 </div>
                 <div class="field field-error">
-                    <label for="error-example">Email address</label>
-                    <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
+                    <label for="email-error-example">Email address</label>
+                    <input id="email-error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
                     <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                </div>
+                <div class="error-summary">
+                    <p><a href="#zip">Zip code needs attention</a></p>
+                </div>
+                <div class="field field-error">
+                    <label for="zip-error-example">Zip Code</label>
+                    <input id="zip-error-example" type="text" value="12345-6789" aria-invalid="true" aria-describedby="error-message">
+                    <p id="error-message"><strong>Error:</strong> Enter a valid five digit numerical zip code. Example: 85020</p>
+                </div>
+                 <div class="error-summary">
+                    <p><a href="#city">City / Town needs attention</a></p>
+                </div>
+                <div class="field field-error">
+                    <label for="city-error-example">City / Town</label>
+                    <input id="city-error-example" type="text" value="PH03N1X" aria-invalid="true" aria-describedby="error-message">
+                    <p id="error-message"><strong>Error:</strong> Enter a valid city or town without numerical characters.</p>
                 </div>
                 <button type="button" disabled>Disabled example</button>
             </section>
