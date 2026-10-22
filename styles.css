@@ -10,7 +10,7 @@
     --color-action:#8c1d40;
     --color-accent:#ffc627;
     --color-border:#747474;
-    --color-error:#b3261e;
+    
     --color-muted:#5c6670;
     --space-3:1rem;
     --radius:.5rem;
@@ -24,6 +24,7 @@
     --dark-blue-gray: #333e4e;
     --gray: #888888;
     --dark-gray: #2c2e31;
+    --color-error:#b3261e;
     
     /* Element coloring */
     --bg-color: var(--off-white);
@@ -52,7 +53,7 @@
 
     /* Outline */
     --element-outline: 4px solid var(--dark-blue-gray);
-    --active-outline: 2px solid var(--green);
+    --active-outline: 4px dashed var(--blue-gray);
 
     /* Font */
     --heading-font: "Rampart One", Arial, sans-serif;
@@ -69,8 +70,12 @@
     box-sizing:border-box;
 }
 
+body, form {
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    margin:0;
     color:var(--font-color);
     background:var(--bg-color);
     background-image: var(--gradient);
@@ -139,7 +144,9 @@ form{
 fieldset{
     padding:1rem;
     border: var(--border);
-    border-radius:var(--border-radius);
+    border-radius: var(--border-radius);
+    background-image: var(--callout-gradient);
+    box-shadow: var(--drop-shadow);
 }
 
 legend,label{
@@ -163,8 +170,28 @@ input:not([type="radio"]):not([type="checkbox"]),select,textarea{
 }
 
 textarea{
-    min-height:8rem;
+    min-height:12rem;
     resize:vertical;
+}
+
+input:hover, select:hover, textarea:hover {
+    background-color: var(--light-green);
+}
+
+input:active, select:active, textarea:active {
+    outline: var(--active-outline);
+}
+
+input:disabled, select:disabled, textarea:disabled {
+    background-color: var(--gray);
+}
+
+fieldset input[type="radio"]:hover, fieldset input[type="checkbox"]:hover {
+    outline: 4px solid var(--green);
+}
+
+fieldset input[type="radio"]:active, fieldset input[type="checkbox"]:active {
+    outline: var(--active-outline);
 }
 
 .choice{
@@ -205,6 +232,15 @@ button{
     border-color:var(--color-error);
 }
 
+button:hover {
+    background-color: var(--link-hover-color);
+    box-shadow: var(--hover-shadow);
+}
+
+button:active {
+    color: var(--green);
+}
+
 button:disabled{
     margin-top: 1rem;
     opacity:.55;
@@ -222,5 +258,20 @@ button:disabled{
         display:grid;
         grid-template-columns:1fr 1fr;
         gap:1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    label, legend {
+        font-size: 1.05em;
+    }
+    textarea {
+        min-height: 10rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    textarea {
+        min-height: 8rem;
     }
 }
