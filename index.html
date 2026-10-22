@@ -10,7 +10,7 @@
             <p class="eyebrow">Application, Registration, or Request</p>
             <h1>What is your water use?</h1>
             <p class="lede">
-                This is a short 5-minute survey for household water use in the Phoenix Metropolitan Area. We are collecting data from the local population to determine reasons for high water consumption, find areas for improvement, and help educate communities on water conservation.
+                This is a short 2 to 5-minute survey for household water use in the Phoenix Metropolitan Area. We are collecting data from the local population to determine reasons for high consumption, find areas for improvement, and help educate communities on water conservation. Data is collected over the course of three months (quarterly), and we kindly ask for your participation during the three-month period to help us identify usage trends. Findings will be published in our quarterly reports.
             </p>
         </header>
         <main>
@@ -18,13 +18,14 @@
                 <h2>F1 · Purpose and Expectations</h2>
                 <p>All fields marked with a <span class="required"> * </span> are required.</p> 
                 <p>
-                    Your information is collected only for the purpose of this survey, cannot be used to identify you personally, and will not be shared outside our organization. Data used in reports is generalized to submissions per area and does not include personal information.
+                    Your information is collected only for the purpose of this survey, will not be used to identify you personally, and will not be shared outside our organization. Data used in reports is generalized to submissions per area and does not include personal information.
                 </p>
+                <p>Please see our section below for specific instructions on how to complete the email, zip code, and city / town fields.</p>
             </section>
             <form action="" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
-                    <p class="help">This information is necessary so we can inform you when our report is published.</p>
+                    <p class="help">This information is necessary so we can notify you each month during your participation window, and identify and group your data from each submission.</p>
                     <div class="field">
                         <label for="name">First name<span class="required"> * </span></label>
                         <input id="name" name="name" type="text" autocomplete="name" required>
@@ -55,18 +56,18 @@
                     </div>
                     <div class="field">
                         <label for="usage">Average water usage per month in gallons <span class="required"> * </span></label>
-                        <input id="usage" name="usage" type="number" min="1" max="50000" required>
+                        <input id="usage" name="usage" type="number" min="0" max="50000" required>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>F3 · Irrigation</legend>
-                    <p class="help">Do you have an outdoor irrigation system?</p>
+                    <p class="help">Do you have an regularly running outdoor irrigation system?</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> 
+                        <input type="radio" name="irrigation" value="Yes"> 
                         Yes
                     </label>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-b" checked>
+                        <input type="radio" name="irrigation" value="No" checked>
                         No
                     </label>
                 </fieldset>
@@ -100,7 +101,8 @@
 
                 <div class="field">
                     <label for="commments">Comments</label>
-                    <p class="help" id="comments-help">You can provide us with any additional information such as anomalies in water usage here.</p>
+                    <p class="help" id="comments-help">You can provide us with any additional information such as anomalies in water usage here. </p>
+                    <p>!! Please avoid entering personally identifiable information !!</p>
                     <textarea id="comments" name="comments" aria-describedby="comments-help"></textarea>
                 </div>
                 <button type="submit">Submit Survey Responses</button>
