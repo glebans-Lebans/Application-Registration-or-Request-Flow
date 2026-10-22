@@ -25,6 +25,8 @@
     --gray: #888888;
     --dark-gray: #2c2e31;
     --color-error:#b3261e;
+    --color-valid:#2e7d32;
+    --bg-error: #fff1f0;
     
     /* Element coloring */
     --bg-color: var(--off-white);
@@ -34,6 +36,7 @@
     --secondary-color: var(--blue-gray);
     --gradient: linear-gradient(transparent 80%, var(--light-green));
     --callout-gradient: linear-gradient(315deg, var(--green) 10px, transparent 75%);
+    --error-gradient: linear-gradient(transparent 5%, var(--bg-error));
     --link-color: var(--green);
     --link-font-color: var(--off-white);
     --link-hover-color: var(--blue-gray);
@@ -194,6 +197,18 @@ fieldset input[type="radio"]:active, fieldset input[type="checkbox"]:active {
     outline: var(--active-outline);
 }
 
+input[type="text"]:user-valid,
+input[type="email"]:user-valid,
+input[type="number"]:user-valid,
+textarea:user-valid{
+    box-shadow: -5px 0px 0px 0px var(--color-valid);
+}
+input:invalid,
+textarea:invalid{
+    background-image: var(--error-gradient);
+    box-shadow: -5px 0px 0px 0px var(--color-error);
+}
+
 .choice{
     display:flex;
     gap:.65rem;
@@ -225,7 +240,7 @@ button{
 .error-summary,.field-error{
     padding:1rem;
     border-left:.4rem solid var(--color-error);
-    background:#fff1f0;
+    background: var(--bg-error);
 }
 
 .field-error input{
