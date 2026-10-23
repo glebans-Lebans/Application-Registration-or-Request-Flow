@@ -102,7 +102,7 @@
                 <div class="field">
                     <label for="commments">Comments</label>
                     <p class="help" id="comments-help">You can provide us with any additional information such as anomalies in water usage here. </p>
-                    <p>!! Please avoid entering personally identifiable information !!</p>
+                    <p class="help"> ‼️ For your own privacy, please avoid entering personally identifiable information here. </p>
                     <textarea id="comments" name="comments" aria-describedby="comments-help"></textarea>
                 </div>
                 <button type="submit">Submit Survey Responses</button>
@@ -110,6 +110,42 @@
             <section id="states">
                 <h2>F5 · State and Recovery Specimen</h2>
                 <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
+                
+                <div id="default">
+                    <h3>Default State</h3>
+                    <label for="default-example">Name</label>
+                    <input id="default-example" type="text" aria-invalid="false" aria-describedby="default-message">
+                    <p id="default-message">Default state example with no input or errors.</p>
+                </div>
+
+                <div id="focus">
+                    <h3>Focus State</h3>
+                    <label for="focus-example">Name</label>
+                    <input id="focus-example" type="text" aria-invalid="false" aria-describedby="focus-message">
+                    <p id="focus-message">Focus state example.</p>
+                </div>
+
+                <div id="required">
+                    <h3>Required State</h3>
+                    <label for="required-example">Name <span class="required"> * </span></label>
+                    <input id="required-example" type="text" aria-invalid="true" aria-describedby="required-message">
+                    <p id="required-message">Required state error example.</p>
+                </div>
+
+                <div id="valid">
+                    <h3>Valid State</h3>
+                    <label for="valid-example">Name</span></label>
+                    <input id="valid-example" type="text" pattern="[^0-9]*" value="John" aria-invalid="false" aria-describedby="valid-message">
+                    <p id="required-message">Valid state example conforms to constraints of no numbers ([^0-9]*).</p>
+                </div>
+
+                <div id="invalid">
+                    <h3>Invalid State</h3>
+                    <label for="invalid-example">Name </span></label>
+                    <input id="invalid-example" type="text" pattern="[^0-9]*" value="Bond007"  aria-invalid="true" aria-describedby="invalid-message">
+                    <p id="invalid-message">Invalid state error because entry does not conform to constraints of no numbers ([^0-9]*).</p>
+                </div>
+                
                 <div id="errors" class="error-summary">
                     <h3>There is a problem with the fictional submission</h3>
                     <p><a href="#email">Email address needs attention</a></p>
