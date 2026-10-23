@@ -4,18 +4,7 @@
 /* Available weights: Regular 400 */
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
-:root{
-    --color-text:#404040;
-    --color-surface:#fff;
-    --color-action:#8c1d40;
-    --color-accent:#ffc627;
-    --color-border:#747474;
-    
-    --color-muted:#5c6670;
-    --space-3:1rem;
-    --radius:.5rem;
-    --measure:68ch;
-    
+:root{    
     /* Colors */
     --off-white: #e8edd1;
     --light-green: #dff2af;
@@ -48,6 +37,7 @@
     /* Spacing */
     --space-aside: 0.5rem;
     --space-card: 1rem;
+    --measure:68ch;
 
     /* Border */
     --border: 1px solid var(--dark-gray);
@@ -128,7 +118,7 @@ h3 {
 main{
     max-width:52rem;
     margin:auto;
-    padding:var(--space-3);
+    padding:var(--space-card);
 }
 
 section,form{
@@ -268,6 +258,22 @@ button:disabled{
     font-weight: bold;
 }
 
+/* F5 example selectors */
+#focus-example {
+    outline:var(--element-outline);
+    outline-offset:.2rem;
+}
+
+#required-example {
+    background-image: var(--error-gradient);
+    box-shadow: -5px 0px 0px 0px var(--color-error);
+}
+
+#valid-example {
+    box-shadow: -5px 0px 0px 0px var(--color-valid);
+}
+
+/* Media Queries */
 @media (min-width:480px){
     .paired-fields{
         display:grid;
