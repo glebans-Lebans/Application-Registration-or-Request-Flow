@@ -22,7 +22,7 @@
                 </p>
                 <p>Please see our section below for specific instructions on how to complete the email, zip code, and city / town fields.</p>
             </section>
-            <form action="" method="get">
+            <form action="#" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
                     <p class="help">This information is necessary so we can notify you each month during your participation window, and identify and group your data from each submission.</p>
@@ -100,7 +100,7 @@
                 </fieldset>
 
                 <div class="field">
-                    <label for="commments">Comments</label>
+                    <label for="comments">Comments</label>
                     <p class="help" id="comments-help">You can provide us with any additional information such as anomalies in water usage here. </p>
                     <p class="help"> ‼️ For your own privacy, please avoid entering personally identifiable information here. </p>
                     <textarea id="comments" name="comments" aria-describedby="comments-help"></textarea>
@@ -134,14 +134,14 @@
 
                 <div id="valid">
                     <h3>Valid State</h3>
-                    <label for="valid-example">Name</span></label>
+                    <label for="valid-example">Name</label>
                     <input id="valid-example" type="text" pattern="[^0-9]*" value="John" aria-invalid="false" aria-describedby="valid-message">
-                    <p id="required-message">Valid state example conforms to constraints of no numbers ([^0-9]*).</p>
+                    <p id="valid-message">Valid state example conforms to constraints of no numbers ([^0-9]*).</p>
                 </div>
 
                 <div id="invalid">
                     <h3>Invalid State</h3>
-                    <label for="invalid-example">Name </span></label>
+                    <label for="invalid-example">Name</label>
                     <input id="invalid-example" type="text" pattern="[^0-9]*" value="Bond007"  aria-invalid="true" aria-describedby="invalid-message">
                     <p id="invalid-message">Invalid state error because entry does not conform to constraints of no numbers ([^0-9]*).</p>
                 </div>
@@ -152,24 +152,24 @@
                 </div>
                 <div class="field field-error">
                     <label for="email-error-example">Email address</label>
-                    <input id="email-error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                    <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                    <input id="email-error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="email-error-message">
+                    <p id="email-error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
                 </div>
                 <div class="error-summary">
                     <p><a href="#zip">Zip code needs attention</a></p>
                 </div>
                 <div class="field field-error">
                     <label for="zip-error-example">Zip Code</label>
-                    <input id="zip-error-example" type="text" value="12345-6789" aria-invalid="true" aria-describedby="error-message">
-                    <p id="error-message"><strong>Error:</strong> Enter a valid five digit numerical zip code. Example: 85020</p>
+                    <input id="zip-error-example" type="text" value="12345-6789" aria-invalid="true" aria-describedby="zip-error-message">
+                    <p id="zip-error-message"><strong>Error:</strong> Enter a valid five digit numerical zip code. Example: 85020</p>
                 </div>
                  <div class="error-summary">
                     <p><a href="#city">City / Town needs attention</a></p>
                 </div>
                 <div class="field field-error">
                     <label for="city-error-example">City / Town</label>
-                    <input id="city-error-example" type="text" value="PH03N1X" aria-invalid="true" aria-describedby="error-message">
-                    <p id="error-message"><strong>Error:</strong> Enter a valid city or town without numerical characters. Example: Phoenix or PHOENIX</p>
+                    <input id="city-error-example" type="text" value="PH03N1X" aria-invalid="true" aria-describedby="city-error-message">
+                    <p id="city-error-message"><strong>Error:</strong> Enter a valid city or town without numerical characters. Example: Phoenix or PHOENIX</p>
                 </div>
                 <button type="button" disabled>Disabled example</button>
             </section>

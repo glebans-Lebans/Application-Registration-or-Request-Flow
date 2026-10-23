@@ -16,6 +16,7 @@
     --color-error:#b3261e;
     --color-valid:#2e7d32;
     --bg-error: #fff1f0;
+    --color-border:#747474;
     
     /* Element coloring */
     --bg-color: var(--off-white);
@@ -272,6 +273,17 @@ button:disabled{
 #valid-example {
     box-shadow: -5px 0px 0px 0px var(--color-valid);
 }
+
+#zip-error-example {
+    background-image: var(--error-gradient);
+    box-shadow: -5px 0px 0px 0px var(--color-error);
+}
+
+#city-error-example {
+    background-image: var(--error-gradient);
+    box-shadow: -5px 0px 0px 0px var(--color-error);
+}
+
 
 /* Media Queries */
 @media (min-width:480px){
