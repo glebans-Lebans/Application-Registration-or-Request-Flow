@@ -20,7 +20,9 @@
                 <p>
                     Your information is collected only for the purpose of this survey, will not be used to identify you personally, and will not be shared outside our organization. Data used in reports is generalized to submissions per area and does not include personal information.
                 </p>
-                <p>Please see our section below for specific instructions on how to complete the email, zip code, and city / town fields.</p>
+                <p>
+                    Please see our section below for specific instructions on how to complete the email, zip code, city/town, and average water usage fields. <a href="#errors">Errors</a>
+                </p>
             </section>
             <form action="#" method="get">
                 <fieldset>
@@ -163,13 +165,21 @@
                     <input id="zip-error-example" type="text" value="12345-6789" aria-invalid="true" aria-describedby="zip-error-message">
                     <p id="zip-error-message"><strong>Error:</strong> Enter a valid five digit numerical zip code. Example: 85020</p>
                 </div>
-                 <div class="error-summary">
+                <div class="error-summary">
                     <p><a href="#city">City / Town needs attention</a></p>
                 </div>
                 <div class="field field-error">
                     <label for="city-error-example">City / Town</label>
                     <input id="city-error-example" type="text" value="PH03N1X" aria-invalid="true" aria-describedby="city-error-message">
                     <p id="city-error-message"><strong>Error:</strong> Enter a valid city or town without numerical characters. Example: Phoenix or PHOENIX</p>
+                </div>
+                <div class="error-summary">
+                    <p><a href="#usage">Average water usage needs attention</a></p>
+                </div>
+                <div class="field field-error">
+                    <label for="usag-error-example">Average water usage per month in gallons</label>
+                    <input id="usage-error-example" type="number" min="0" value="-1" aria-invalid="true" aria-describedby="usage-error-message">
+                    <p id="usage-error-message"><strong>Error:</strong> Enter a valid usage amount of 0 or more.</p>
                 </div>
                 <button type="button" disabled>Disabled example</button>
             </section>
